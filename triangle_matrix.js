@@ -8,7 +8,7 @@ function drawLinearMatrix(number) {
   }
 }
 
-function drawCrossMatrix(number) {
+function drawTriangleMatrix(number) {
   number = parseInt(number);
   
   let max = number ** 2;
@@ -91,7 +91,7 @@ readline.question(`Type input number: `, number => {
   console.time('test');
   drawLinearMatrix(number);
   process.stdout.write('\n\n');
-  drawCrossMatrix(number);
+  drawTriangleMatrix(number);
   console.timeEnd('test');
   readline.close();
 });
