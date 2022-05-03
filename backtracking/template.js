@@ -23,7 +23,7 @@ function getCandidates(state){
 function search(state, solutions){
   if (isValidState(state)){
     solutions.push(state);
-    console.log(solutions);
+    // console.log(solutions);
     // // If only require 1 solution, return immediately
     // return;
   }
@@ -33,7 +33,7 @@ function search(state, solutions){
     state.push(candidate);
     // console.log(state);
     search(state, solutions)
-    state = state.filter(e => false);
+    state.pop();
   }
 }
 

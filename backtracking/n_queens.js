@@ -65,7 +65,7 @@ function search(state, solutions, number){
     // console.log(`Before search ${state}`);
     search(state.slice(), solutions, number);
     // console.log(`Finish candidate ${candidate} for state: ${state}`);
-    state = state.filter(e => e !== candidate);
+    state.pop();
     // console.log(`After search ${state}`);
   }
 
